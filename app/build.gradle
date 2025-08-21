@@ -5,7 +5,6 @@ plugins {
 }
 
 android {
-    namespace 'com.chuong.pro'
     compileSdk 36
     
     defaultConfig {
