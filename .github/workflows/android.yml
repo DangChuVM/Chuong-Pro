@@ -28,7 +28,7 @@ jobs:
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
-          java-version: 17
+          java-version: 21
           distribution: temurin
 
       - name: Cache Gradle
@@ -39,6 +39,9 @@ jobs:
 
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
+
+      - name: List project root contents for debugging
+        run: ls -l .
 
       - name: Build Release APK
         run: ./gradlew assembleRelease --build-cache
