@@ -44,7 +44,7 @@ jobs:
         run: ls -l .
 
       - name: Build Release APK
-        run: ./gradlew assembleRelease --build-cache
+        run: ./gradlew assembleRelease
 
       - name: Set short SHA
         id: set_sha
