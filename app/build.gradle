@@ -20,10 +20,19 @@ android {
         }
     }
 
+    signingConfigs {
+        release {
+            storeFile file("chuong.keystore")
+            storePassword "chuong"
+            keyAlias "chuong"
+            keyPassword "chuong"
+        }
+    }
     buildTypes {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 
